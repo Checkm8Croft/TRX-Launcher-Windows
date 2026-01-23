@@ -1,4 +1,4 @@
-name: Build and Publish TRX Launcher
+name: Build, Publish and Release TRX Launcher
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build-and-release:
     runs-on: windows-latest
 
     steps:
@@ -18,16 +18,12 @@ jobs:
       with:
         dotnet-version: '8.0.x'
 
-    # If there's a single solution file in the repo root, dotnet restore and build
-    # without a path will operate on it. This avoids hard-coding the exact .sln name.
     - name: Restore dependencies
       run: dotnet restore
 
     - name: Build Release
       run: dotnet build -c Release --no-restore
 
-    # Publish the specific project which is in the subfolder named "TRX Launcher".
-    # Use quotes because the folder name contains a space.
     - name: Publish self-contained folder
       run: dotnet publish "TRX Launcher/TRX Launcher.csproj" -c Release -r win-x64 --self-contained true /p:PublishSingleFile=false -o ./publish --no-build
 
@@ -36,8 +32,18 @@ jobs:
         if (Test-Path ./TRX_Launcher.zip) { Remove-Item ./TRX_Launcher.zip -Force }
         Compress-Archive -Path ./publish/* -DestinationPath ./TRX_Launcher.zip -Force
 
-    - name: Upload ZIP as artifact
-      uses: actions/upload-artifact@v4
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v1
       with:
-        name: TRX_Launcher_ZIP
-        path: TRX_Launcher.zip
+        tag_name: v1.0.0       # cambiare versione ad ogni release
+        name: TRX Launcher v1.0.0
+        body: "TRX Launcher Release - ZIP self-contained con WPF"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Upload ZIP to Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: TRX_Launcher.zip
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
