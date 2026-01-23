@@ -3,7 +3,7 @@ name: Build and Publish TRX Launcher
 on:
   push:
     branches: [ main ]
-  workflow_dispatch:  # permette di lanciare manualmente il workflow
+  workflow_dispatch:
 
 jobs:
   build:
@@ -18,17 +18,24 @@ jobs:
       with:
         dotnet-version: '8.0.x'
 
+    - name: Debug - list files (verify csproj path)
+      run: |
+        Write-Host "Current working directory: $(Get-Location)"
+        Get-ChildItem -File -Recurse | Select-Object FullName
+
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore 'TRX-Launcher\TRX Launcher\TRX Launcher.csproj'
 
     - name: Build Release
-      run: dotnet build '"TRX-Launcher/TRX Launcher/TRX Launcher.csproj"' -c Release
+      run: dotnet build 'TRX-Launcher\TRX Launcher\TRX Launcher.csproj' -c Release --no-restore
 
     - name: Publish self-contained folder
-      run: dotnet publish "TRX-Launcher/TRX Launcher/TRX Launcher.csproj" -c Release -r win-x64 --self-contained true /p:PublishSingleFile=false -o ./publish
+      run: dotnet publish 'TRX-Launcher\TRX Launcher\TRX Launcher.csproj' -c Release -r win-x64 --self-contained true /p:PublishSingleFile=false -o ./publish --no-build
 
     - name: Create ZIP
-      run: powershell Compress-Archive -Path ./publish/* -DestinationPath ./TRX_Launcher.zip
+      run: |
+        if (Test-Path ./TRX_Launcher.zip) { Remove-Item ./TRX_Launcher.zip -Force }
+        Compress-Archive -Path ./publish/* -DestinationPath ./TRX_Launcher.zip -Force
 
     - name: Upload ZIP as artifact
       uses: actions/upload-artifact@v4
