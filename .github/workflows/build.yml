@@ -18,19 +18,18 @@ jobs:
       with:
         dotnet-version: '8.0.x'
 
-    - name: Debug - list files (verify csproj path)
-      run: |
-        Write-Host "Current working directory: $(Get-Location)"
-        Get-ChildItem -File -Recurse | Select-Object FullName
-
+    # If there's a single solution file in the repo root, dotnet restore and build
+    # without a path will operate on it. This avoids hard-coding the exact .sln name.
     - name: Restore dependencies
-      run: dotnet restore 'TRX-Launcher\TRX Launcher\TRX Launcher.csproj'
+      run: dotnet restore
 
     - name: Build Release
-      run: dotnet build 'TRX-Launcher\TRX Launcher\TRX Launcher.csproj' -c Release --no-restore
+      run: dotnet build -c Release --no-restore
 
+    # Publish the specific project which is in the subfolder named "TRX Launcher".
+    # Use quotes because the folder name contains a space.
     - name: Publish self-contained folder
-      run: dotnet publish 'TRX-Launcher\TRX Launcher\TRX Launcher.csproj' -c Release -r win-x64 --self-contained true /p:PublishSingleFile=false -o ./publish --no-build
+      run: dotnet publish "TRX Launcher/TRX Launcher.csproj" -c Release -r win-x64 --self-contained true /p:PublishSingleFile=false -o ./publish --no-build
 
     - name: Create ZIP
       run: |
