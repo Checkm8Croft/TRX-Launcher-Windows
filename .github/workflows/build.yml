@@ -39,11 +39,11 @@ jobs:
         name: TRX Launcher v1.0.0
         body: "TRX Launcher Release - ZIP self-contained con WPF"
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 
     - name: Upload ZIP to Release
       uses: softprops/action-gh-release@v1
       with:
         files: TRX_Launcher.zip
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GH_PAT }}
