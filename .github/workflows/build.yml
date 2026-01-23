@@ -31,7 +31,7 @@ jobs:
       run: powershell Compress-Archive -Path ./publish/* -DestinationPath ./TRX_Launcher.zip
 
     - name: Upload ZIP as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: TRX_Launcher_ZIP
         path: TRX_Launcher.zip
