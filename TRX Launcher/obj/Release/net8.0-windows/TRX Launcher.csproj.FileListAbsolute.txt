@@ -1,0 +1,30 @@
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\bin\Release\net8.0-windows\TRX Launcher.exe
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\bin\Release\net8.0-windows\IMG\TR1X.png
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\bin\Release\net8.0-windows\IMG\TR2X.png
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\bin\Release\net8.0-windows\IMG\TR3X.png
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\bin\Release\net8.0-windows\TRX Launcher.deps.json
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\bin\Release\net8.0-windows\TRX Launcher.runtimeconfig.json
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\bin\Release\net8.0-windows\TRX Launcher.dll
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\bin\Release\net8.0-windows\TRX Launcher.pdb
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\obj\Release\net8.0-windows\TR1X.baml
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\obj\Release\net8.0-windows\MainWindow.g.cs
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\obj\Release\net8.0-windows\TR1X.g.cs
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\obj\Release\net8.0-windows\TR2X.g.cs
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\obj\Release\net8.0-windows\TR3X.g.cs
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\obj\Release\net8.0-windows\App.g.cs
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\obj\Release\net8.0-windows\TRX Launcher_Content.g.cs
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\obj\Release\net8.0-windows\TRX Launcher_MarkupCompile.cache
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\obj\Release\net8.0-windows\TRX Launcher_MarkupCompile.lref
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\obj\Release\net8.0-windows\MainWindow.baml
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\obj\Release\net8.0-windows\TR2X.baml
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\obj\Release\net8.0-windows\TR3X.baml
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\obj\Release\net8.0-windows\TRX Launcher.g.resources
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\obj\Release\net8.0-windows\TRX Launcher.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\obj\Release\net8.0-windows\TRX Launcher.AssemblyInfoInputs.cache
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\obj\Release\net8.0-windows\TRX Launcher.AssemblyInfo.cs
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\obj\Release\net8.0-windows\TRX Launcher.csproj.CoreCompileInputs.cache
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\obj\Release\net8.0-windows\TRX Launcher.dll
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\obj\Release\net8.0-windows\refint\TRX Launcher.dll
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\obj\Release\net8.0-windows\TRX Launcher.pdb
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\obj\Release\net8.0-windows\TRX Launcher.genruntimeconfig.cache
+C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\obj\Release\net8.0-windows\ref\TRX Launcher.dll

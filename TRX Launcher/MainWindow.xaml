@@ -1,0 +1,22 @@
+﻿<Window x:Class="TRX_Launcher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TRX_Launcher"
+        mc:Ignorable="d"
+        Title="TRX Launcher" Height="373" Width="670">
+    <Grid>
+        <TabControl x:Name="GameTabs">
+            <TabItem Header="TR1X">
+                <Frame Content="{Binding TR1XPage}" NavigationUIVisibility="Hidden" Margin="0,0,-20,-42"/>
+            </TabItem>
+            <TabItem Header="TR2X">
+                <Frame Content="{Binding TR2XPage}" NavigationUIVisibility="Hidden"/>
+            </TabItem>
+            <TabItem Header="TR3X">
+                <Frame Content="{Binding TR3XPage}" NavigationUIVisibility="Hidden"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

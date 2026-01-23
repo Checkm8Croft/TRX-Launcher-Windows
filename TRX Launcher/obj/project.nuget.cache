@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "JKLObsAtmc8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Checkm8ra1n\\source\\repos\\TRX Launcher\\TRX Launcher\\TRX Launcher.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Checkm8ra1n\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.23\\microsoft.net.illink.tasks.8.0.23.nupkg.sha512",
+    "C:\\Users\\Checkm8ra1n\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.23\\microsoft.aspnetcore.app.runtime.win-x64.8.0.23.nupkg.sha512",
+    "C:\\Users\\Checkm8ra1n\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.23\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.23.nupkg.sha512",
+    "C:\\Users\\Checkm8ra1n\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.23\\microsoft.netcore.app.runtime.win-x64.8.0.23.nupkg.sha512"
+  ],
+  "logs": []
+}

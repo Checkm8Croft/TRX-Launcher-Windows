@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\Checkm8ra1n\source\repos\TRX Launcher\TRX Launcher\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="TR1X.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TR2X.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TR3X.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
