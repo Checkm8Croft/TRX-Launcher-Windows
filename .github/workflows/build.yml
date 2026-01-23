@@ -1,0 +1,37 @@
+name: Build and Publish TRX Launcher
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:  # permette di lanciare manualmente il workflow
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build Release
+      run: dotnet build TRX_Launcher.csproj -c Release
+
+    - name: Publish self-contained folder
+      run: dotnet publish TRX_Launcher.csproj -c Release -r win-x64 --self-contained true /p:PublishSingleFile=false -o ./publish
+
+    - name: Create ZIP
+      run: powershell Compress-Archive -Path ./publish/* -DestinationPath ./TRX_Launcher.zip
+
+    - name: Upload ZIP as artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: TRX_Launcher_ZIP
+        path: TRX_Launcher.zip
